@@ -35,7 +35,7 @@
 ### Windows 用户
 1. 克隆仓库：
    ```bash
-   git clone https://github.com/wang11222004/Campus-Navigation-Systrm-Based-on-QT-and-C-.git
+   git clone https://github.com/wang11222004/Campus-Navigation-System-Based-on-QT-and-C-.git
    ```
 2. 使用Qt Creator打开 `CampusNavigation.pro` 文件
 3. 配置构建套件（建议使用Release模式）
