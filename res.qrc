@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="人物">images/maonan.png</file>
+        <file alias="百度地图版">images/map.png</file>
+        <file alias="绘图版">images/map2.png</file>
+        <file alias="俯瞰版">images/UPC.png</file>
+        <file alias="登录背景">images/denglu.jpg</file>
+        <file alias="注册背景">images/regis.jpeg</file>
+        <file alias="主页面背景">images/background-index.png</file>
+        <file alias="顶栏图片">images/baidu.png</file>
+        <file>images/close_hover.png</file>
+        <file>images/close_normal.png</file>
+        <file>images/max_hover.png</file>
+        <file>images/max_normal.png</file>
+        <file>images/min_hover.png</file>
+        <file>images/min_normal.png</file>
+        <file>images/normal_hover.png</file>
+        <file>images/normal_normal.png</file>
+        <file>images/createsun.jpg</file>
+        <file>images/huicui.jpg</file>
+        <file>images/less_than.png</file>
+        <file>images/lib.jpg</file>
+        <file>images/more_than.png</file>
+        <file>images/nanjiao.jpg</file>
+        <file>images/tiyuguan.jpg</file>
+    </qresource>
+</RCC>

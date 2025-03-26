@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>map</class>
+ <widget class="QMainWindow" name="map">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2560</width>
+    <height>1440</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>2560</width>
+    <height>1440</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2560</width>
+    <height>1440</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>220</y>
+      <width>361</width>
+      <height>901</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="addPointBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>增加地点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="delPointBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>删除地点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addPathBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>增加路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="delPathBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>删除路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="changePnameBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>设置地点名称</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="changePathlenBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>设置路径长度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="showPathlenBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>显示路径长度</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="allandshortestBt">
+         <property name="font">
+          <font>
+           <family>楷体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+         </property>
+         <property name="text">
+          <string>显示全部路径和最短路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="PointLabel">
+           <property name="font">
+            <font>
+             <family>黑体</family>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(62, 65, 64);</string>
+           </property>
+           <property name="text">
+            <string>点数：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lineLabel">
+           <property name="font">
+            <font>
+             <family>黑体</family>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(62, 65, 64);</string>
+           </property>
+           <property name="text">
+            <string>路径数：</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="Title">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>60</y>
+      <width>1041</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(62, 65, 64);</string>
+    </property>
+    <property name="text">
+     <string>标题</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="changeTitleBt">
+    <property name="geometry">
+     <rect>
+      <x>1820</x>
+      <y>1230</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+    </property>
+    <property name="text">
+     <string>修改标题</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="changeBackBt">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>1230</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+    </property>
+    <property name="text">
+     <string>更换背景</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="installMapBt">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>1230</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+    </property>
+    <property name="text">
+     <string>载入地图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveMapBt">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>1230</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+    </property>
+    <property name="text">
+     <string>保存地图</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="messagelist">
+    <property name="geometry">
+     <rect>
+      <x>2040</x>
+      <y>210</y>
+      <width>441</width>
+      <height>941</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+    background-color: #f0f0f0; /* 设置背景颜色 */
+    border: 1px solid #cccccc; /* 设置边框样式和颜色 */
+    padding: 5px; /* 设置内边距 */
+}
+
+QListWidget::item {
+    height: 25px; /* 设置每个列表项的高度 */
+    padding: 5px; /* 设置每个列表项的内边距 */
+}
+
+QListWidget::item:selected {
+    background-color: #b0d4ff; /* 设置选中项的背景颜色 */
+    color: #000000; /* 设置选中项的文字颜色 */
+}
+
+QListWidget::item:hover {
+    background-color: #e0e0e0; /* 设置鼠标悬停在项上时的背景颜色 */
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="underLabel">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>1170</y>
+      <width>711</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>23</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(62, 65, 64);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="startPointLabel">
+    <property name="geometry">
+     <rect>
+      <x>2200</x>
+      <y>150</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="endPointLabel">
+    <property name="geometry">
+     <rect>
+      <x>2330</x>
+      <y>150</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="human">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>950</y>
+      <width>461</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="myself">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>62</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/人物);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>2</y>
+       <width>451</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+    color: rgb(62, 65, 64);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="clearTitleBt">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>1230</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    color: rgb(62, 65, 64);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #999999, stop: 1 
+	#ffffff
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #939393, stop: 1 #bebebe
+        );
+    }</string>
+    </property>
+    <property name="text">
+     <string>清除地图</string>
+    </property>
+   </widget>
+   <widget class="MainTitleBar" name="widgetTitle">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2560</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>71</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainTitleBar</class>
+   <extends>QMenuBar</extends>
+   <header location="global">titlebar/maintitlebar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
